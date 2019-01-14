@@ -333,7 +333,9 @@ function handleDocumentMouseup(e) {
  * @param {Element} e The annotation element that was clicked
  */
 function handleAnnotationClick(target) {
-  createEditOverlay(target);
+  if (!isDragging) {
+    createEditOverlay(target);
+  }
 }
 
 /**
